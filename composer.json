@@ -12,7 +12,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": "^5.4 | ^7.0"
+        "php": "^5.4 | ^7.0",
+        "dhii/data-container-abstract": "dev-task/initial-classes",
+        "dhii/data-container-interface": "dev-task/initial-interfaces"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
