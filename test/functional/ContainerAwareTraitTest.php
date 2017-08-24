@@ -88,4 +88,19 @@ class ContainerAwareTraitTest extends TestCase
 
         $this->assertSame($data, $result, 'Container set is not the same as container retrieved');
     }
+
+    /**
+     * Tests whether an invalid container set attempt causes an appropriate exception to be thrown.
+     *
+     * @since [*next-version*]
+     */
+    public function testSetContainerFailure()
+    {
+        $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+        $data = new \stdClass();
+
+        $this->setExpectedException('InvalidArgumentException');
+        $_subject->_setContainer($data);
+    }
 }
