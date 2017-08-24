@@ -4,14 +4,22 @@ namespace Dhii\Data\Container\Exception;
 
 use Exception as RootException;
 use Dhii\Data\Container\ContainerInterface;
+use Dhii\Data\Container\DataKeyAwareTrait;
 
 /**
  * An exception that relates to a container.
  *
  * @since [*next-version*]
  */
-class NotFoundException extends AbstractNotFoundException implements NotFoundExceptionInterface
+class NotFoundException extends AbstractBaseContainerException implements NotFoundExceptionInterface
 {
+    /*
+     * Adds data key awareness.
+     *
+     * @since [*next-version*]
+     */
+    use DataKeyAwareTrait;
+
     /**
      * @since [*next-version*]
      *

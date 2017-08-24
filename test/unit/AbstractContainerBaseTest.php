@@ -3,9 +3,10 @@
 namespace Dhii\Data\Container\UnitTest;
 
 use Xpmock\TestCase;
+use Dhii\Data\Container\AbstractContainerBase as TestSubject;
 
 /**
- * Tests {@see \Dhii\Data\Container\AbstractContainerBase}.
+ * Tests {@see TestSubject}.
  *
  * @since [*next-version*]
  */
@@ -16,14 +17,14 @@ class AbstractContainerBaseTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Data\\Container\\AbstractContainerBase';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Data\Container\AbstractContainerBase';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\Container\AbstractContainerBase
+     * @return TestSubject The new instance of the test subject.
      */
     public function createInstance()
     {

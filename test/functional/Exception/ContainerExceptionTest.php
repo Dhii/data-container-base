@@ -3,9 +3,11 @@
 namespace Dhii\Data\Container\FuncTest\Exception;
 
 use Xpmock\TestCase;
+use Exception as RootException;
+use Dhii\Data\Container\Exception\ContainerException as TestSubject;
 
 /**
- * Tests {@see \Dhii\Data\Container\Exception\ContainerException}.
+ * Tests {@see TestSubject}.
  *
  * @since [*next-version*]
  */
@@ -16,14 +18,14 @@ class ContainerExceptionTest extends TestCase
      *
      * @since [*next-version*]
      */
-    const TEST_SUBJECT_CLASSNAME = 'Dhii\\Data\\Container\\Exception\\ContainerException';
+    const TEST_SUBJECT_CLASSNAME = 'Dhii\Data\Container\Exception\ContainerException';
 
     /**
      * Creates a new instance of the test subject.
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\Container\Exception\ContainerException
+     * @return TestSubject The new instance of the test subject.
      */
     public function createInstance($message = null, $code = 0, $previous = null, $container = null)
     {
@@ -42,9 +44,7 @@ class ContainerExceptionTest extends TestCase
     {
         $subject = $this->createInstance();
 
-        $this->assertInstanceOf(
-            self::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created'
-        );
+        $this->assertInstanceOf(self::TEST_SUBJECT_CLASSNAME, $subject, 'A valid instance of the test subject could not be created');
     }
 
     /**
@@ -54,11 +54,11 @@ class ContainerExceptionTest extends TestCase
      *
      * @param string     $message
      * @param int        $code
-     * @param \Exception $previous
+     * @param RootException $previous
      *
-     * @return \Exception The new exception.
+     * @return RootException The new exception.
      */
-    public function createException($message = null, $code = null, \Exception $previous = null)
+    public function createException($message = null, $code = null, RootException $previous = null)
     {
         return new \Exception($message, $code, $previous);
     }
@@ -68,11 +68,11 @@ class ContainerExceptionTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\Container\ContainerInterface The new instance.
+     * @return \Dhii\Data\Container\ContainerInterface The new instance of the test subject.
      */
     public function createContainer()
     {
-        $container = $this->mock('Dhii\\Data\\Container\\ContainerInterface')
+        $container = $this->mock('Dhii\Data\Container\ContainerInterface')
                 ->has()
                 ->get()
                 ->new();

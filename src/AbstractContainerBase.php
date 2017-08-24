@@ -11,16 +11,16 @@ use Dhii\Data\Container\Exception\NotFoundException;
  *
  * @since [*next-version*]
  */
-abstract class AbstractContainerBase extends AbstractContainer implements ContainerInterface
+abstract class AbstractContainerBase implements ContainerInterface
 {
     /**
      * {@inheritdoc}
      *
      * @since [*next-version*]
      */
-    protected function _createContainerException($message = null, ContainerInterface $container = null, RootException $previous = null)
+    protected function _createContainerException($message = null, RootException $previous = null)
     {
-        return new ContainerException($message, 0, $previous, $container);
+        return new ContainerException($message, 0, $previous, $this);
     }
 
     /**
@@ -28,8 +28,8 @@ abstract class AbstractContainerBase extends AbstractContainer implements Contai
      *
      * @since [*next-version*]
      */
-    protected function _createNotFoundException($message = null, ContainerInterface $container = null, $dataKey = null, RootException $previous = null)
+    protected function _createNotFoundException($message = null, $dataKey = null, RootException $previous = null)
     {
-        return new NotFoundException($message, 0, $previous, $container, $dataKey);
+        return new NotFoundException($message, 0, $previous, $this, $dataKey);
     }
 }

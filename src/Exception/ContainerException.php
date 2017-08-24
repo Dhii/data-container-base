@@ -10,7 +10,7 @@ use Dhii\Data\Container\ContainerInterface;
  *
  * @since [*next-version*]
  */
-class ContainerException extends AbstractContainerException implements ContainerExceptionInterface
+class ContainerException extends AbstractBaseContainerException implements ContainerExceptionInterface
 {
     /**
      * @since [*next-version*]
