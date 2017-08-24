@@ -14,7 +14,7 @@
     "require": {
         "php": "^5.4 | ^7.0",
         "dhii/data-container-abstract": "dev-task/initial-classes",
-        "dhii/data-container-interface": "dev-task/initial-interfaces"
+        "dhii/data-container-interface": "^0.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^4.8",
