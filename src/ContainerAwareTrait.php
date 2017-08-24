@@ -39,6 +39,7 @@ trait ContainerAwareTrait
      * @since [*next-version*]
      *
      * @param ContainerInterface|null $container The container.
+     *
      * @throws InvalidArgumentException If not a valid container.
      */
     protected function _setContainer($container)

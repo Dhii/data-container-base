@@ -31,11 +31,11 @@ class ContainerAwareTraitTest extends TestCase
     {
         $mock = $this->getMockForTrait(static::TEST_SUBJECT_CLASSNAME);
         $mock->method('__')
-                ->will($this->returnCallback(function($string, $args) {
+                ->will($this->returnCallback(function ($string, $args) {
                     return vsprintf($string, $args);
                 }));
         $mock->method('_createInvalidArgumentException')
-                ->will($this->returnCallback(function($message = '', $code = 0, $previous = null, $argument = null) {
+                ->will($this->returnCallback(function ($message = '', $code = 0, $previous = null, $argument = null) {
                     return new InvalidArgumentException($message, $code, $previous);
                 }));
 

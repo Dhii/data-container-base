@@ -52,8 +52,8 @@ class ContainerExceptionTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @param string     $message
-     * @param int        $code
+     * @param string        $message
+     * @param int           $code
      * @param RootException $previous
      *
      * @return RootException The new exception.
