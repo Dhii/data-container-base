@@ -4,23 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a0a31aa134a2e3b477bc7239109012c9",
+    "content-hash": "82b917d43840387c6cf4259b99d638b4",
     "packages": [
         {
             "name": "dhii/data-container-interface",
-            "version": "v0.1",
+            "version": "dev-task/3-extend-exception-interfaces",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dhii/data-container-interface.git",
-                "reference": "57f589f402006639594e9884258712ce4ee463bc"
+                "reference": "90fe2f92e02dfcf87d1490dba2ddbf1571132045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dhii/data-container-interface/zipball/57f589f402006639594e9884258712ce4ee463bc",
-                "reference": "57f589f402006639594e9884258712ce4ee463bc",
+                "url": "https://api.github.com/repos/Dhii/data-container-interface/zipball/90fe2f92e02dfcf87d1490dba2ddbf1571132045",
+                "reference": "90fe2f92e02dfcf87d1490dba2ddbf1571132045",
                 "shasum": ""
             },
             "require": {
+                "dhii/exception-interface": "dev-release/0.1",
                 "php": "^5.3 | ^7.0",
                 "psr/container": "^1.0"
             },
@@ -51,7 +52,7 @@
                 }
             ],
             "description": "Interfaces for working with data containers",
-            "time": "2017-08-14T14:41:16+00:00"
+            "time": "2017-08-27 22:30:45"
         },
         {
             "name": "dhii/exception",
@@ -2378,6 +2379,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "dhii/data-container-interface": 20,
         "dhii/exception-helper-base": 20,
         "dhii/i18n-helper-base": 20,
         "dhii/php-cs-fixer-config": 20

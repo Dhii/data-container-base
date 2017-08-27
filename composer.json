@@ -13,7 +13,7 @@
     "prefer-stable": true,
     "require": {
         "php": "^5.4 | ^7.0",
-        "dhii/data-container-interface": "^0.1",
+        "dhii/data-container-interface": "dev-task/3-extend-exception-interfaces",
         "dhii/exception-helper-base": "dev-task/initial-classes",
         "dhii/i18n-helper-base": "dev-develop"
     },
