@@ -4,6 +4,7 @@ namespace Dhii\Data\Container;
 
 use Dhii\Util\String\StringableInterface as Stringable;
 use Exception as RootException;
+use InvalidArgumentException;
 
 /**
  * Functionality for storage and retrieval of a data key.
