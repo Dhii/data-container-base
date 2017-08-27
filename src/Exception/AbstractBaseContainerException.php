@@ -8,6 +8,9 @@ use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
 use Dhii\Data\Container\ContainerAwareTrait;
 
 /**
+ * Common functionality for container exceptions.
+ *
+ * @since [*next-version*]
  */
 abstract class AbstractBaseContainerException extends RootException
 {
