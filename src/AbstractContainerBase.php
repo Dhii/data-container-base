@@ -15,7 +15,7 @@ use Dhii\Util\String\StringableInterface as Stringable;
 abstract class AbstractContainerBase implements ContainerInterface
 {
     /**
-     * {@inheritdoc}
+     * Creates a new container exception.
      *
      * @param string|Stringable|null $message The message for the exception, if any.
      * @param RootException $previous The inner exception, if any.
@@ -28,7 +28,7 @@ abstract class AbstractContainerBase implements ContainerInterface
     }
 
     /**
-     * {@inheritdoc}
+     * Creates a new not found exception.
      *
      * @param string|Stringable|null $message The message for the exception, if any.
      * @param string|Stringable|null $dataKey The data key, if any.
