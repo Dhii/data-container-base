@@ -28,8 +28,6 @@ trait DataKeyAwareTrait
      * @since [*next-version*]
      *
      * @param string|Stringable|null $key The key.
-     *
-     * @return $this
      */
     protected function _setDataKey($key)
     {
