@@ -18,7 +18,7 @@ abstract class AbstractContainerBase implements ContainerInterface
      * Creates a new container exception.
      *
      * @param string|Stringable|null $message The message for the exception, if any.
-     * @param RootException $previous The inner exception, if any.
+     * @param RootException|null $previous The inner exception, if any.
      *
      * @since [*next-version*]
      */
@@ -32,7 +32,7 @@ abstract class AbstractContainerBase implements ContainerInterface
      *
      * @param string|Stringable|null $message The message for the exception, if any.
      * @param string|Stringable|null $dataKey The data key, if any.
-     * @param RootException $previous The inner exception, if any.
+     * @param RootException|null $previous The inner exception, if any.
      *
      * @since [*next-version*]
      */
