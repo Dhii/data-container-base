@@ -21,6 +21,8 @@ abstract class AbstractContainerBase implements ContainerInterface
      * @param RootException|null     $previous The inner exception, if any.
      *
      * @since [*next-version*]
+     *
+     * @return ContainerException The new exception.
      */
     protected function _createContainerException($message = null, RootException $previous = null)
     {
@@ -35,6 +37,8 @@ abstract class AbstractContainerBase implements ContainerInterface
      * @param RootException|null     $previous The inner exception, if any.
      *
      * @since [*next-version*]
+     *
+     * @return NotFoundException The new exception.
      */
     protected function _createNotFoundException($message = null, $dataKey = null, RootException $previous = null)
     {
