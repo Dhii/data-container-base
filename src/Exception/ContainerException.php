@@ -17,7 +17,7 @@ class ContainerException extends AbstractBaseContainerException implements Conta
      * @since [*next-version*]
      *
      * @param string|Stringable|null  $message   The exception message, if any.
-     * @param int                $code      The exception code.
+     * @param int                     $code      The exception code.
      * @param RootException|null      $previous  The inner exception, if any.
      * @param ContainerInterface|null $container The associated container, if any.
      */
