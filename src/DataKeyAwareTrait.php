@@ -28,6 +28,8 @@ trait DataKeyAwareTrait
      * @since [*next-version*]
      *
      * @param string|Stringable|null $key The key.
+     *
+     * @throws InvalidArgumentException If the key is invalid.
      */
     protected function _setDataKey($key)
     {
