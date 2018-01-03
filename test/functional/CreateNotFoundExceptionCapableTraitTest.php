@@ -1,6 +1,6 @@
 <?php
 
-namespace Dhii\Data\Container\UnitTest;
+namespace Dhii\Data\Container\FuncTest;
 
 use Dhii\Data\Container\ContainerInterface;
 use Dhii\Data\Container\Exception\NotFoundException;
