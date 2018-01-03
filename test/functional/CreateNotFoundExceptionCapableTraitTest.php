@@ -117,11 +117,12 @@ class CreateNotFoundExceptionCapableTraitTest extends TestCase
         $subject = $this->createInstance();
         $_subject = $this->reflect($subject);
         $message = uniqid('message');
-        $key = uniqid('key');
+        $code = rand(1, 99);
         $inner = $this->createException(uniqid('inner-message'));
         $container = $this->createContainer();
+        $key = uniqid('key');
 
-        $result = $_subject->_createNotFoundException($message, $key, $inner, $container);
+        $result = $_subject->_createNotFoundException($message, $code, $inner, $container, $key);
         try {
             throw $result;
         } catch (NotFoundException $e) {

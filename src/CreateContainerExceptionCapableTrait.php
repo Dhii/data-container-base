@@ -11,16 +11,21 @@ trait CreateContainerExceptionCapableTrait
     /**
      * Creates a new container exception.
      *
-     * @param string|Stringable|null $message   The message for the exception, if any.
-     * @param RootException|null     $previous  The inner exception, if any.
-     * @param ContainerInterface     $container The problematic container, if any.
+     * @param string|Stringable|null     $message   The exception message, if any.
+     * @param int|string|Stringable|null $code      The numeric exception code, if any.
+     * @param RootException|null         $previous  The inner exception, if any.
+     * @param ContainerInterface|null    $container The associated container, if any.
      *
      * @since [*next-version*]
      *
      * @return ContainerException The new exception.
      */
-    protected function _createContainerException($message = null, RootException $previous = null, ContainerInterface $container = null)
-    {
-        return new ContainerException($message, 0, $previous, $container);
+    protected function _createContainerException(
+        $message = null,
+        $code = null,
+        RootException $previous = null,
+        ContainerInterface $container = null
+    ) {
+        return new ContainerException($message, $code, $previous, $container);
     }
 }

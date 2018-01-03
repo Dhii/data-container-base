@@ -117,10 +117,11 @@ class CreateContainerExceptionCapableTraitTest extends TestCase
         $subject = $this->createInstance();
         $_subject = $this->reflect($subject);
         $message = uniqid('message');
+        $code = rand(1, 99);
         $inner = $this->createException(uniqid('inner-message'));
         $container = $this->createContainer();
 
-        $result = $_subject->_createContainerException($message, $inner, $container);
+        $result = $_subject->_createContainerException($message, $code, $inner, $container);
         try {
             throw $result;
         } catch (ContainerException $e) {
