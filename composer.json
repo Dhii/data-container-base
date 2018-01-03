@@ -14,6 +14,7 @@
     "require": {
         "php": "^5.4 | ^7.0",
         "dhii/data-container-interface": "^0.1 | ^0.2",
+        "dhii/data-container-abstract": "^0.1",
         "dhii/exception-helper-base": "dev-develop",
         "dhii/i18n-helper-base": "dev-develop"
     },
