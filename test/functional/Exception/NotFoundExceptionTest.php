@@ -3,6 +3,7 @@
 namespace Dhii\Data\Container\FuncTest\Exception;
 
 use Xpmock\TestCase;
+use Psr\Container\ContainerInterface;
 
 /**
  * Tests {@see \Dhii\Data\Container\Exception\NotFoundException}.
@@ -68,11 +69,11 @@ class NotFoundExceptionTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\Container\ContainerInterface The new instance.
+     * @return ContainerInterface The new instance.
      */
     public function createContainer()
     {
-        $container = $this->mock('Dhii\\Data\\Container\\ContainerInterface')
+        $container = $this->mock('Psr\Container\ContainerInterface')
                 ->has()
                 ->get()
                 ->new();

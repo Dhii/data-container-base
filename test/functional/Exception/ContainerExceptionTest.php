@@ -5,6 +5,7 @@ namespace Dhii\Data\Container\FuncTest\Exception;
 use Xpmock\TestCase;
 use Exception as RootException;
 use Dhii\Data\Container\Exception\ContainerException as TestSubject;
+use Psr\Container\ContainerInterface;
 
 /**
  * Tests {@see TestSubject}.
@@ -68,11 +69,11 @@ class ContainerExceptionTest extends TestCase
      *
      * @since [*next-version*]
      *
-     * @return \Dhii\Data\Container\ContainerInterface The new instance of the test subject.
+     * @return ContainerInterface The new instance of the test subject.
      */
     public function createContainer()
     {
-        $container = $this->mock('Dhii\Data\Container\ContainerInterface')
+        $container = $this->mock('Psr\Container\ContainerInterface')
                 ->has()
                 ->get()
                 ->new();

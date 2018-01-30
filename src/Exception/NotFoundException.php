@@ -3,9 +3,9 @@
 namespace Dhii\Data\Container\Exception;
 
 use Exception as RootException;
-use Dhii\Data\Container\ContainerInterface;
 use Dhii\Data\Container\DataKeyAwareTrait;
 use Dhii\Util\String\StringableInterface as Stringable;
+use Psr\Container\ContainerInterface;
 
 /**
  * An exception that relates to a container.
