@@ -2,11 +2,11 @@
 
 namespace Dhii\Data\Container\FuncTest;
 
-use Dhii\Data\Container\ContainerInterface;
 use Xpmock\TestCase;
 use PHPUnit_Framework_MockObject_MockObject as MockObject;
 use Exception as RootException;
 use Dhii\Data\Container\Exception\ContainerException;
+use Psr\Container\ContainerInterface;
 
 class CreateContainerExceptionCapableTraitTest extends TestCase
 {
@@ -81,7 +81,7 @@ class CreateContainerExceptionCapableTraitTest extends TestCase
      */
     public function createContainer(array $map = [])
     {
-        return $this->mock('Dhii\Data\Container\ContainerInterface')
+        return $this->mock('Psr\Container\ContainerInterface')
             ->get(function ($key) use ($map) {
                 return isset($map[$key])
                     ? $map[$key]
