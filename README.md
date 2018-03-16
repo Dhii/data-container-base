@@ -8,19 +8,28 @@
 
 
 ## Details
-This package contains base functionality for container implementations. This includes exceptions, exception factories,
-and a small opinionated base implementation that demonstrates simple common usage.
+This package contains base implementations of standard [container-related interfaces][dhii/data-container-interface],
+which includes exceptions, exception factories, and a small opinionated base implementation that demonstrates
+simple common usage. Because the standard is an extension of [PSR-11][], this implementation is compliant with PSR-11.
 
 ### Classes
+- [`AbstractBaseContainer`][AbstractBaseContainer] - A base class for containers. For the simplest implementation, 
+only needs a constructor added.
 - [`ContainerException`][ContainerException] - Represents a problem with a container.
 - [`NotFoundException`][NotFoundException] - Occurs when a key cannot be found in a container.
+
+### Traits
 - [`CreateContainerExceptionCapableTrait`][CreateContainerExceptionCapableTrait] - Creates `ContainerException` instances.
 - [`CreateNotFoundExceptionCapableTrait`][CreateNotFoundExceptionCapableTrait] - Creates `NotFoundException` instances
 
 
-[Dhii]: https://github.com/Dhii/dhii
+[Dhii]:                                             https://github.com/Dhii/dhii
+[PSR-11]:                                           https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-11-container.md
 
+[AbstractBaseContainer]:                            src/AbstractBaseContainer.php
 [ContainerException]:                               src/Exception/ContainerException.php
 [NotFoundException]:                                src/Exception/NotFoundException.php
 [CreateContainerExceptionCapableTrait]:             src/CreateContainerExceptionCapableTrait.php
 [CreateNotFoundExceptionCapableTrait]:              src/CreateNotFoundExceptionCapableTrait.php
+
+[dhii/data-container-interface]:                    https://packagist.org/packages/dhii/data-container-interface
