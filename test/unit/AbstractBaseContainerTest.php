@@ -31,7 +31,7 @@ class AbstractBaseContainerTest extends TestCase
      *
      * @param array $methods The methods to mock.
      *
-     * @return MockObject|TestSubject  The new instance.
+     * @return MockObject|TestSubject The new instance.
      */
     public function createInstance($methods = [])
     {
@@ -264,7 +264,7 @@ class AbstractBaseContainerTest extends TestCase
             ->method('_hasData')
             ->will($this->returnValueMap([
                 [$keyTrue, true],
-                [$keyFalse, false]
+                [$keyFalse, false],
             ]));
 
         $result = $_subject->_has($keyTrue);
@@ -345,5 +345,18 @@ class AbstractBaseContainerTest extends TestCase
 
         $result = $subject->has($key);
         $this->assertEquals($isHas, $result, 'Wrong check result');
+    }
+
+    /**
+     * Tests that `_construct()` works as expected.
+     *
+     * @since [*next-version*]
+     */
+    public function testConstruct()
+    {
+        $subject = $this->createInstance();
+        $_subject = $this->reflect($subject);
+
+        $_subject->_construct();
     }
 }
