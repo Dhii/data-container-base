@@ -2,7 +2,6 @@
 
 namespace Dhii\Data\Container;
 
-
 use Exception as RootException;
 use InvalidArgumentException;
 use Psr\Container\ContainerExceptionInterface;
