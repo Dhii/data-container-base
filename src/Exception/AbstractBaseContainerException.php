@@ -2,46 +2,16 @@
 
 namespace Dhii\Data\Container\Exception;
 
-use Exception as RootException;
-use Dhii\I18n\StringTranslatingTrait;
-use Dhii\Exception\CreateInvalidArgumentExceptionCapableTrait;
+use Dhii\Exception\AbstractBaseException;
 use Dhii\Data\Container\ContainerAwareTrait;
-use Dhii\Util\Normalization\NormalizeIntCapableTrait;
-use Dhii\Util\Normalization\NormalizeStringCapableTrait;
 
 /**
  * Common functionality for container exceptions.
  *
  * @since [*next-version*]
  */
-abstract class AbstractBaseContainerException extends RootException
+abstract class AbstractBaseContainerException extends AbstractBaseException
 {
-    /* Adds string normalization capability.
-     *
-     * @since [*next-version*]
-     */
-    use NormalizeStringCapableTrait;
-
-    /* Adds int normalization capability.
-     *
-     * @since [*next-version*]
-     */
-    use NormalizeIntCapableTrait;
-
-    /*
-     * Adds string translation functionality.
-     *
-     * @since [*next-version*]
-     */
-    use StringTranslatingTrait;
-
-    /*
-     * Adds exception-creating factory.
-     *
-     * @since [*next-version*]
-     */
-    use CreateInvalidArgumentExceptionCapableTrait;
-
     /*
      * Adds container awareness.
      *
