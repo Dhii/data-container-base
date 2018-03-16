@@ -32,15 +32,7 @@ class NotFoundException extends AbstractBaseContainerException implements NotFou
      */
     public function __construct($message = null, $code = null, RootException $previous = null, ContainerInterface $container = null, $dataKey = null)
     {
-        $message = is_null($message)
-            ? $message
-            : $this->_normalizeString($message);
-
-        $code = is_null($code)
-            ? $code
-            : $this->_normalizeInt($code);
-
-        parent::__construct($message, $code, $previous);
+        $this->_initBaseException($message, $code, $previous);
         $this->_setContainer($container);
         $this->_setDataKey($dataKey);
 

@@ -23,15 +23,7 @@ class ContainerException extends AbstractBaseContainerException implements Conta
      */
     public function __construct($message = null, $code = null, RootException $previous = null, ContainerInterface $container = null)
     {
-        $message = is_null($message)
-            ? $message
-            : $this->_normalizeString($message);
-
-        $code = is_null($code)
-            ? $code
-            : $this->_normalizeInt($code);
-
-        parent::__construct($message, $code, $previous);
+        $this->_initBaseException($message, $code, $previous);
         $this->_setContainer($container);
 
         $this->_construct();
@@ -45,5 +37,19 @@ class ContainerException extends AbstractBaseContainerException implements Conta
     public function getContainer()
     {
         return $this->_getContainer();
+    }
+
+    /**
+     * Calls the parent constructor.
+     *
+     * @param string        $message  The error message.
+     * @param int           $code     The error code.
+     * @param RootException $previous The inner exception, if any.
+     *
+     * @since [*next-version*]
+     */
+    protected function _initParent($message = '', $code = 0, RootException $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
     }
 }
